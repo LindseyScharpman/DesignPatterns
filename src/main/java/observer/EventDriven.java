@@ -1,6 +1,7 @@
 package observer;
 
 import java.awt.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,14 +14,14 @@ public class EventDriven {
     }
 
     public void fireKeyPress() {
-        Event e = new Event("key press");
+        Event e = new Event("key press"  );
         for (Listener listener : observers)
             if (listener instanceof KeyEventListener)
                 listener.doStuff(e);
     }
 
     public void fireButtonPress() {
-        Event e = new Event("button press");
+        Event e = new Event("button press"+ System.currentTimeMillis() );
         for (Listener listener : observers)
             if (listener instanceof ButtonListener)
                 listener.doStuff(e);
@@ -68,6 +69,8 @@ class ButtonListener implements Listener {
     public void doStuff(Event e) {
         System.out.println(e + ":buttion pressed");
     }
+
+    Integer x = 10;
 }
 
 
