@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import java.util.Arrays;
 
 /**
  * JDK的动态代理只能代理实现了某个接口的类,并且只能代理该接口的方法
